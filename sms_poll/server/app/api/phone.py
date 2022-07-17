@@ -5,6 +5,7 @@ from ..config import config
 
 router = APIRouter(prefix='/phone')
 
+
 if config.debug:
     @router.get('/number')
     def number():

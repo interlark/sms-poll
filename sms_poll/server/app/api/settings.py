@@ -29,7 +29,7 @@ async def get_flag(name: str):
 
 
 @router.put('/flags', response_model=SettingsSchema[bool], status_code=status.HTTP_202_ACCEPTED)
-async def set_flag(data: SettingsInSchema[bool], dependency = Depends(verify_localhost)):
+async def set_flag(data: SettingsInSchema[bool], dependency=Depends(verify_localhost)):
     """Set settings flag."""
     flag = await Settings.all().filter(name=data.name, type='FLAG').get()
     flag.update_from_dict(data.dict(exclude_unset=True))
@@ -50,7 +50,7 @@ async def get(name: str):
 
 
 @router.put('/strings', response_model=SettingsSchema[str], status_code=status.HTTP_202_ACCEPTED)
-async def edit(string: SettingsInSchema[str], dependency = Depends(verify_localhost)):
+async def edit(string: SettingsInSchema[str], dependency=Depends(verify_localhost)):
     """Edit string."""
     string_obj = await Settings.filter(name=string.name, type='STRING').get()
     string_obj.update_from_dict(string.dict(exclude_unset=True))

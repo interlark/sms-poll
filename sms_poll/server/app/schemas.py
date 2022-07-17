@@ -1,4 +1,4 @@
-from typing import Generic, TypeVar
+from typing import Generic, TypeVar, Any
 
 from pydantic.generics import GenericModel
 from tortoise.contrib.pydantic import PydanticModel, pydantic_model_creator
@@ -7,14 +7,28 @@ from .models import Items, Votes, Settings
 
 T = TypeVar('T')
 
-ItemsInSchema = pydantic_model_creator(Items, name='ItemsIn', exclude=['id'])
-ItemsSchema = pydantic_model_creator(Items, name='Items')
 
-class VotesSchema(pydantic_model_creator(Votes, name='Votes')):
+ItemsInSchemaBase: Any = pydantic_model_creator(Items, name='ItemsIn', exclude=('id',))
+ItemsSchemaBase: Any = pydantic_model_creator(Items, name='Items')
+VotesSchemaBase: Any = pydantic_model_creator(Votes, name='Votes')
+VotesInSchemaBase: Any = pydantic_model_creator(Votes, name='VotesIn', exclude=('id',))
+
+
+class ItemsInSchema(ItemsInSchemaBase):
+    pass
+
+
+class ItemsSchema(ItemsSchemaBase):
+    pass
+
+
+class VotesSchema(VotesSchemaBase):
     item_id: int
 
-class VotesInSchema(pydantic_model_creator(Votes, name='VotesIn', exclude=['id'])):
+
+class VotesInSchema(VotesInSchemaBase):
     item_id: int
+
 
 class SettingsInSchema(PydanticModel, GenericModel, Generic[T]):
     name: str
@@ -22,6 +36,13 @@ class SettingsInSchema(PydanticModel, GenericModel, Generic[T]):
 
     class Config:
         orig_model = Settings
-        
+
+
 class SettingsSchema(SettingsInSchema, GenericModel, Generic[T]):
     type: str
+
+
+class ItemsVotesSchema(PydanticModel):
+    id: int
+    name: str
+    votes_count: int

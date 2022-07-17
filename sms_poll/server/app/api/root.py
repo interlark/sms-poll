@@ -5,6 +5,7 @@ from .dependencies import verify_localhost
 
 router = APIRouter(prefix='')
 
+
 @router.get('/')
 async def index_redirect(request: Request):
     """Redirect localhost to admin page, others to poll page."""

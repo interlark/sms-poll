@@ -2,7 +2,7 @@ import os
 import sys
 
 
-def get_platform():
+def get_platform() -> str:
     # On Android sys.platform returns 'linux2', so prefer to check the
     # existence of environ variables set during Python initialization
     kivy_build = os.environ.get('KIVY_BUILD', '')
@@ -25,5 +25,6 @@ def get_platform():
         return 'linux'
 
     return 'unknown'
+
 
 PLATFORM = get_platform()

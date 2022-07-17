@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+from typing import Any
 import asyncio
 
 from fastapi import FastAPI
@@ -30,8 +33,12 @@ def create_app() -> FastAPI:
     app.include_router(settings_router)
     app.include_router(root_router)
 
-    app.mount('/admin', StaticFiles(directory=ROOT_DIR / 'static' / 'admin', html=True), name='admin')
-    app.mount('/poll', StaticFiles(directory=ROOT_DIR / 'static' / 'poll', html=True), name='poll')
+    app.mount('/admin', StaticFiles(
+        directory=ROOT_DIR / 'static' / 'admin', html=True), name='admin'
+    )
+    app.mount('/poll', StaticFiles(
+        directory=ROOT_DIR / 'static' / 'poll', html=True), name='poll'
+    )
 
     app.add_middleware(
         CORSMiddleware,
@@ -59,7 +66,7 @@ def create_app() -> FastAPI:
             if retrieved_number:
                 phone_number = retrieved_number
 
-        defaults = [
+        defaults: list[dict[str, Any]] = [
             {'name': '#', 'value': '#', 'type': 'STRING'},
             {'name': 'Item', 'value': 'Item', 'type': 'STRING'},
             {'name': 'Votes', 'value': 'Votes', 'type': 'STRING'},
@@ -78,8 +85,9 @@ def create_app() -> FastAPI:
     async def start_services() -> None:
         if PLATFORM == 'android':
             import re
-            def add_vote(phone, message):
-                item_id = re.sub('[^\d]', '', message)
+
+            def add_vote(phone: str, message: str):
+                item_id = re.sub(r'[^\d]', '', message)
                 if item_id:
                     vote = Votes(phone=phone, item_id=item_id)
                     asyncio.run_coroutine_threadsafe(vote.save(), loop)
