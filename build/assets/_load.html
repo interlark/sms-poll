@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+        html,
+        body,
+        div,
+        span {
+          margin: 0;
+          padding: 0;
+          border: 0;
+          font-size: 100%;
+          font: inherit;
+          vertical-align: baseline;
+          box-sizing: border-box;
+        }
+
+        body {
+          line-height: 1;
+        }
+
+        #load {
+          height: 100vh;
+          width: 100vw;
+          background: #1a202c;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+        }
+
+        .spinner {
+          height: 3rem;
+          width: 3rem;
+          display: inline-block;
+          border-color: rgba(255, 255, 255, 0.92);
+          border-style: solid;
+          border-radius: 99999px;
+          border-width: 2px;
+          border-bottom-color: transparent;
+          border-left-color: transparent;
+          animation: spinner-animation 0.45s linear infinite;
+          -webkit-animation: spinner-animation 0.45s linear infinite;
+        }
+
+        @keyframes spinner-animation {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      </style>
+      <title>Python WebView loader</title>
+    </head>
+    <body>
+      <div id="load">
+        <div class="spinner"></div>
+      </div>
+    </body>
+  </html>
+</html>

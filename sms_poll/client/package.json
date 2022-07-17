@@ -1,0 +1,31 @@
+{
+  "name": "smspoll-client",
+  "version": "0.1.0",
+  "description": "SMS Poll Client App",
+  "source": [
+    "src/apps/admin/index.html",
+    "src/apps/poll/index.html"
+  ],
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "interlark",
+  "license": "MIT",
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "parcel": "^2.6.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.2.3",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "axios": "^0.27.2",
+    "framer-motion": "^6.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0"
+  }
+}
