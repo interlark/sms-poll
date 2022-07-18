@@ -8,4 +8,5 @@ node_modules/
 *.db-shm
 *.db-wal
 dist/
+release/
 *.apk
