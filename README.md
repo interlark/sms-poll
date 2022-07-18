@@ -10,9 +10,10 @@
     <a href="https://github.com/interlark/sms-poll/edit/master/requirements.txt"><img alt="Built with FastAPI, ReactJS, P4A" src="https://badgen.net/badge/Built%20with/FastAPI,ReactJS,P4A?list=|"/></a>
     <a href="https://github.com/interlark/sms-poll/blob/master/LICENSE"><img alt="License GPL v3" src="https://badgen.net/badge/License/GPL v3?color=green"/></a>
     <a href="https://github.com/interlark/sms-poll"><img alt="Python versions" src="https://badgen.net/badge/Python/3.7,3.8,3.9,3.10?list=|"/></a>
-</div><br>
+</div>
+<br />
 
-**SMS Poll** is Android app that turns your phone into __SMS-based poll system__ which you can deploy for your audience during *competitions, conferences or any other meetings*.
+**SMS Poll** is Android app that turns your phone into **SMS-based poll system** which you can deploy for your audience during *competitions, conferences or any other meetings*.
 
 <br />
 <div align="center">
@@ -35,33 +36,33 @@ You can download latest APK from [Releases](https://github.com/interlark/sms-pol
 
 * Just edit your poll list and that's it!
 
-   <img width="65%" src="https://user-images.githubusercontent.com/20641837/179471062-00505e89-6163-47c5-a050-1abf540ef4fd.gif" />
+   <img width="65%" alt="Demo edit list" src="https://user-images.githubusercontent.com/20641837/179471062-00505e89-6163-47c5-a050-1abf540ef4fd.gif" />
 
 
 * Your poll web page is 🔗 `http://<wifi-ip>:5000/poll`
 
-   <img width="85%" src="https://user-images.githubusercontent.com/20641837/179475097-f47e53e3-a06d-4640-ae7c-bd9eb9352e39.gif" />
+   <img width="85%" alt="Demo polling" src="https://user-images.githubusercontent.com/20641837/179475097-f47e53e3-a06d-4640-ae7c-bd9eb9352e39.gif" />
 
 
 <details>
   <summary>🖼️ <b>Screenshots</b></summary>
 
-<img width="30%" src="https://user-images.githubusercontent.com/20641837/179479514-72826ff7-8320-4779-ad9f-3b3458825862.jpg" />
+<img width="30%" alt="Mobile screenshot 1" src="https://user-images.githubusercontent.com/20641837/179479514-72826ff7-8320-4779-ad9f-3b3458825862.jpg" />
 
-<img width="30%" src="https://user-images.githubusercontent.com/20641837/179479519-a0942d26-1205-41cb-a790-ee0cb0202e4f.jpg" />
+<img width="30%" alt="Mobile screenshot 2" src="https://user-images.githubusercontent.com/20641837/179479519-a0942d26-1205-41cb-a790-ee0cb0202e4f.jpg" />
 
-<img width="30%" src="https://user-images.githubusercontent.com/20641837/179479522-0c71b70a-5c3e-4d7c-8d63-a428f3139837.jpg" />
+<img width="30%" alt="Mobile screenshot 3" src="https://user-images.githubusercontent.com/20641837/179479522-0c71b70a-5c3e-4d7c-8d63-a428f3139837.jpg" />
 
-<img width="30%" src="https://user-images.githubusercontent.com/20641837/179479523-50c27eda-4cd0-4dd5-841d-c512fbba1f54.jpg" />
+<img width="30%" alt="Mobile screenshot 4" src="https://user-images.githubusercontent.com/20641837/179479523-50c27eda-4cd0-4dd5-841d-c512fbba1f54.jpg" />
 
-<img width="30%" src="https://user-images.githubusercontent.com/20641837/179479524-a5f046bc-a196-48d7-bc90-eed1224ac65c.jpg" />
+<img width="30%" alt="Mobile screenshot 5" src="https://user-images.githubusercontent.com/20641837/179479524-a5f046bc-a196-48d7-bc90-eed1224ac65c.jpg" />
   
 
 </details>
 
 ## 💡 IRL
 <div align="center">
-    <img width="75%" alt="Realworld screenshot" src="https://user-images.githubusercontent.com/20641837/179423895-52618b56-3210-4883-9f41-a41565733260.jpg" />
+    <img width="75%" alt="Realworld poll photo" src="https://user-images.githubusercontent.com/20641837/179423895-52618b56-3210-4883-9f41-a41565733260.jpg" />
 </div>
 
 ## 📱 Requirements
