@@ -75,7 +75,7 @@ For development [p4a](https://github.com/kivy/python-for-android) and [npm](http
 # Clone repo and install requirements
 git clone https://github.com/interlark/sms-poll && cd sms-poll
 pip -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements.txt Cython
 
 # Build JS static files
 make build_static
