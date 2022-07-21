@@ -36,7 +36,7 @@ You can download latest APK from [Releases](https://github.com/interlark/sms-pol
 
 * Just edit your poll list and that's it!
 
-   <img width="40%" alt="Demo edit list" src="https://user-images.githubusercontent.com/20641837/179471062-00505e89-6163-47c5-a050-1abf540ef4fd.gif" />
+   <img width="45%" alt="Demo edit list" src="https://user-images.githubusercontent.com/20641837/179471062-00505e89-6163-47c5-a050-1abf540ef4fd.gif" />
 
 
 * Your poll web page is 🔗 `http://<wifi-ip>:5000/poll`
